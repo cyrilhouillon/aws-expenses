@@ -5,7 +5,6 @@ Resources:
   DynamoDBTable:
     Type: AWS::DynamoDB::Table
     Properties:
-      TableName: "expenses"
       AttributeDefinitions:
         - AttributeName: "expenseId"
           AttributeType: S
@@ -26,6 +25,9 @@ Resources:
       Runtime: nodejs12.x
       CodeUri: src/enter-receipt
       Handler: index.handler
+      Environment:
+        Variables:
+          EXPENSE_TABLE_NAME: !Ref DynamoDBTable
       Policies:
         - Version: '2012-10-17'
           Statement:

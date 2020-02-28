@@ -1,5 +1,6 @@
 const AWS = require('aws-sdk');
 const uuid = require('uuid/v4');
+const EXPENSE_TABLE_NAME = process.env.EXPENSE_TABLE_NAME;
 
 exports.handler = async (event) => {
     console.log("bonjour!");
@@ -17,7 +18,7 @@ exports.handler = async (event) => {
     }
     console.log("objet créé!");
     await dynamoDb.put({
-        TableName: "expenses",
+        TableName: EXPENSE_TABLE_NAME,
         Item: receipt
     }).promise();
     console.log("put !");
