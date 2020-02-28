@@ -1,0 +1,10 @@
+{
+  "name": "expenses",
+  "version": "1.0.0",
+  "dependencies": {
+    "uuid": "^7.0.1"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.627.0"
+  }
+}

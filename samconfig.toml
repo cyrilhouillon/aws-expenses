@@ -1,0 +1,9 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "expenses"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-aqnr2tffq512"
+s3_prefix = "expenses"
+region = "eu-west-3"
+capabilities = "CAPABILITY_IAM"
